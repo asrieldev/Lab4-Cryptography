@@ -1,0 +1,21 @@
+{
+  "exercise": "digital_signature",
+  "lab": "Cryptography Fundamentals Lab 4",
+  "result": {
+    "algorithm": "RSA-2048-PSS-SHA-256",
+    "checks": {
+      "modified_message_rejected": true,
+      "valid_message_verifies": true
+    },
+    "key_material_logged": false,
+    "message": "This message was approved for the lab demonstration.",
+    "passed": true,
+    "public_key_fingerprint_sha256": "23260f3897a5fecb14dffe99938ef4f3511d11a86dae589d10a4bfe68132bceb",
+    "signature_hex": "a151726859f3476674007563e703202eab8798a82f449b71eb122dfb68563d19fca16573371208d56c007f00a498297c79fdfef418dd23da5e67f33011bbace320c4dd337eeed95de1a656c89fa371b22f346a3e53f6897b73090fdf8b3fba78d2f02feb7c6d3f9226bcc3f912f5ef58bc243f8ac89bd73f5f9f2daca3a8fcbd5a23a049812e07f646dca6e052c0365085195ed2f969cf8907645f82e69724ca11725ad276949501a8277feaa67e1a40bbdeef82d7365bf5ef917fbcba9f5d447432177815196b00ad9b2e02d22adf624902b1862ac41d6d01ed9a17d777f791ef1415d442683ea7becc6cfb1525ed7bdb3a4571290d7e898f2c973e2a2e995a"
+  },
+  "runtime": {
+    "cryptography": "50.0.2",
+    "python": "3.12.14"
+  },
+  "timestamp_utc": "2026-11-02T15:22:57.274592+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "exercise": "sha256",
+  "lab": "Cryptography Fundamentals Lab 4",
+  "result": {
+    "algorithm": "SHA-256",
+    "binary_sample_digest": "1300a159a1d403d33dace7fc88e47a4a35ae004d9598430472a128ac5e59576d",
+    "binary_sample_hex": "00010280ff",
+    "changed_digest": "d5097a02134c9bc9f1e99717c77cbea18e69e2600d5056a0f6a073f29d420b04",
+    "changed_digest_bits_different": 132,
+    "changed_digest_bits_total": 256,
+    "checks": {
+      "binary_input_hashed": true,
+      "changed_input_changes_digest": true,
+      "digest_is_256_bits": true,
+      "image_input_hashed": true
+    },
+    "empty_input_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "image_bytes": 180581,
+    "image_file": "screenshots/vscode_run.jpg",
+    "image_sha256": "6b78737b01b6b20a7bd6a53dd8c1b461f4e0ce44571ee8cc4e7549cbd6bae4da",
+    "one_character_changed_input": "cryptography protects information.",
+    "passed": true,
+    "sample_digest": "d5358feb2816ea2f1f27b44c03f8a326969489c058dcaa6c3eab86afa7b58d96",
+    "sample_input": "Cryptography protects information."
+  },
+  "runtime": {
+    "cryptography": "50.0.2",
+    "python": "3.12.14"
+  },
+  "timestamp_utc": "2026-11-02T15:22:57.274592+00:00"
+}

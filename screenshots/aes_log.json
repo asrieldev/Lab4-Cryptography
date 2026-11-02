@@ -1,0 +1,46 @@
+{
+  "exercise": "aes",
+  "lab": "Cryptography Fundamentals Lab 4",
+  "result": {
+    "algorithm": "AES-256-GCM",
+    "associated_data": "course=information-security;exercise=AES-GCM",
+    "cbc_mode_comparison": {
+      "algorithm": "AES-256-CBC with PKCS7 padding",
+      "authenticated": false,
+      "ciphertext_bytes": 48,
+      "iv_hex": "fb56b5a1ee62fd39edc9792ed7bd05c0",
+      "round_trip_matches": true,
+      "warning": "Bare CBC provides no integrity; prefer an authenticated mode such as GCM."
+    },
+    "checks": {
+      "aes_128_and_256_gcm_round_trip": true,
+      "aes_256_cbc_round_trip": true,
+      "gcm_decryption_matches": true,
+      "gcm_tampering_rejected": true
+    },
+    "ciphertext_and_tag_hex": "6eacf023af258358fb3783230fd4ad259f52b3befec2ed613609cc83f38147b7b9f86a4939e73293d8b1fca150757d6a7cc5a510a9f3c2fe88",
+    "key_bits": 256,
+    "key_material_logged": false,
+    "key_size_comparison": [
+      {
+        "ciphertext_and_tag_bytes": 57,
+        "key_bits": 128,
+        "round_trip_matches": true
+      },
+      {
+        "ciphertext_and_tag_bytes": 57,
+        "key_bits": 256,
+        "round_trip_matches": true
+      }
+    ],
+    "nonce_hex": "c2b632fa1f2d6697e1b9b18b",
+    "passed": true,
+    "plaintext": "Lab 4: protect this confidential message.",
+    "recovered_plaintext": "Lab 4: protect this confidential message."
+  },
+  "runtime": {
+    "cryptography": "50.0.2",
+    "python": "3.12.14"
+  },
+  "timestamp_utc": "2026-11-02T15:22:57.274592+00:00"
+}

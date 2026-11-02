@@ -1,0 +1,108 @@
+{
+  "exercises": {
+    "aes": {
+      "algorithm": "AES-256-GCM",
+      "associated_data": "course=information-security;exercise=AES-GCM",
+      "cbc_mode_comparison": {
+        "algorithm": "AES-256-CBC with PKCS7 padding",
+        "authenticated": false,
+        "ciphertext_bytes": 48,
+        "iv_hex": "fb56b5a1ee62fd39edc9792ed7bd05c0",
+        "round_trip_matches": true,
+        "warning": "Bare CBC provides no integrity; prefer an authenticated mode such as GCM."
+      },
+      "checks": {
+        "aes_128_and_256_gcm_round_trip": true,
+        "aes_256_cbc_round_trip": true,
+        "gcm_decryption_matches": true,
+        "gcm_tampering_rejected": true
+      },
+      "ciphertext_and_tag_hex": "6eacf023af258358fb3783230fd4ad259f52b3befec2ed613609cc83f38147b7b9f86a4939e73293d8b1fca150757d6a7cc5a510a9f3c2fe88",
+      "key_bits": 256,
+      "key_material_logged": false,
+      "key_size_comparison": [
+        {
+          "ciphertext_and_tag_bytes": 57,
+          "key_bits": 128,
+          "round_trip_matches": true
+        },
+        {
+          "ciphertext_and_tag_bytes": 57,
+          "key_bits": 256,
+          "round_trip_matches": true
+        }
+      ],
+      "nonce_hex": "c2b632fa1f2d6697e1b9b18b",
+      "passed": true,
+      "plaintext": "Lab 4: protect this confidential message.",
+      "recovered_plaintext": "Lab 4: protect this confidential message."
+    },
+    "digital_signature": {
+      "algorithm": "RSA-2048-PSS-SHA-256",
+      "checks": {
+        "modified_message_rejected": true,
+        "valid_message_verifies": true
+      },
+      "key_material_logged": false,
+      "message": "This message was approved for the lab demonstration.",
+      "passed": true,
+      "public_key_fingerprint_sha256": "23260f3897a5fecb14dffe99938ef4f3511d11a86dae589d10a4bfe68132bceb",
+      "signature_hex": "a151726859f3476674007563e703202eab8798a82f449b71eb122dfb68563d19fca16573371208d56c007f00a498297c79fdfef418dd23da5e67f33011bbace320c4dd337eeed95de1a656c89fa371b22f346a3e53f6897b73090fdf8b3fba78d2f02feb7c6d3f9226bcc3f912f5ef58bc243f8ac89bd73f5f9f2daca3a8fcbd5a23a049812e07f646dca6e052c0365085195ed2f969cf8907645f82e69724ca11725ad276949501a8277feaa67e1a40bbdeef82d7365bf5ef917fbcba9f5d447432177815196b00ad9b2e02d22adf624902b1862ac41d6d01ed9a17d777f791ef1415d442683ea7becc6cfb1525ed7bdb3a4571290d7e898f2c973e2a2e995a"
+    },
+    "rsa_encryption": {
+      "algorithm": "RSA-2048-OAEP-SHA-256",
+      "checks": {
+        "decryption_matches": true,
+        "modified_ciphertext_rejected": true,
+        "rsa_2048_and_3072_round_trip": true
+      },
+      "ciphertext_hex": "67db247da748e2c8fcbf2e723d155d394718510fe01a97408c7f04aa9c12a6d6b844f1ce9407f17d0460f2c80d61096b300fc8b629c42c000d971748ca3530261f4dfd44e741367107c1f2cbe222043b460a191b1ed67a68ff377abd21200b57eff42bfc519757a60a0201ab4286bfa9a9548000ff4b37165433f793494b1657bef521a0b565b35b98b1574b9336a44fbe18addc6fe295a97754c00c53e8f8c7018a01ff28d0a0f646d1cf78d788c6a6c282f922c181775d7fa9815838b8e2f0c9dd9ef17877cab4b1b70328d2d5d0b85673e618653dae0ece4861f437154fa2f685f70415afd3bbe8bb450d4d7f1374833b00c1972e35761424e9b41ecf1bd1",
+      "key_material_logged": false,
+      "key_size_comparison": [
+        {
+          "ciphertext_bytes": 256,
+          "key_bits": 2048,
+          "round_trip_matches": true
+        },
+        {
+          "ciphertext_bytes": 384,
+          "key_bits": 3072,
+          "round_trip_matches": true
+        }
+      ],
+      "note": "RSA-OAEP is for short inputs; use hybrid encryption for bulk data.",
+      "passed": true,
+      "plaintext": "RSA-OAEP protects a short session secret.",
+      "public_key_fingerprint_sha256": "3a7bcc96fd4366dec2d39cf7f2e071e1e27482779c626c4d151c322b749a4e37"
+    },
+    "sha256": {
+      "algorithm": "SHA-256",
+      "binary_sample_digest": "1300a159a1d403d33dace7fc88e47a4a35ae004d9598430472a128ac5e59576d",
+      "binary_sample_hex": "00010280ff",
+      "changed_digest": "d5097a02134c9bc9f1e99717c77cbea18e69e2600d5056a0f6a073f29d420b04",
+      "changed_digest_bits_different": 132,
+      "changed_digest_bits_total": 256,
+      "checks": {
+        "binary_input_hashed": true,
+        "changed_input_changes_digest": true,
+        "digest_is_256_bits": true,
+        "image_input_hashed": true
+      },
+      "empty_input_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "image_bytes": 180581,
+      "image_file": "screenshots/vscode_run.jpg",
+      "image_sha256": "6b78737b01b6b20a7bd6a53dd8c1b461f4e0ce44571ee8cc4e7549cbd6bae4da",
+      "one_character_changed_input": "cryptography protects information.",
+      "passed": true,
+      "sample_digest": "d5358feb2816ea2f1f27b44c03f8a326969489c058dcaa6c3eab86afa7b58d96",
+      "sample_input": "Cryptography protects information."
+    }
+  },
+  "lab": "Cryptography Fundamentals Lab 4",
+  "passed": true,
+  "runtime": {
+    "cryptography": "50.0.2",
+    "python": "3.12.14"
+  },
+  "timestamp_utc": "2026-11-02T15:22:57.274592+00:00"
+}
