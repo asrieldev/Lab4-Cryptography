@@ -19,10 +19,10 @@ python .\run_all.py
 Run an exercise on its own:
 
 ```powershell
-python .\exercise1_aes\aes_demo.py
-python .\exercise2_rsa\rsa_demo.py
-python .\exercise3_sha256\sha256_demo.py
-python .\exercise4_signatures\signature_demo.py
+python .\exercise1_aes\aes.py
+python .\exercise2_rsa\rsa.py
+python .\exercise3_sha256\sha256.py
+python .\exercise4_signatures\signature.py
 ```
 
 To rebuild the environment on another computer, use an installed Python version supported by `cryptography`:
@@ -53,10 +53,3 @@ The combined machine-readable results are saved to `screenshots/experiment_log.j
 - `report/`: editable report and PDF copy.
 - `run_all.py`: runs every exercise and records the results.
 
-# Dear cryptographer:
-# When I wrote this code, only God and I knew how it worked.
-# Now only God knows!
-# The AES key is random, the nonce is unique,
-# and the ciphertext is authenticated.
-# If decryption still fails, check the AAD
-# before blaming quantum computing & debugging_hours_spent = 5
